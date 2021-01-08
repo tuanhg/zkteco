@@ -1,4 +1,18 @@
 from zk import ZK, const
+from import sys
+nam=sys.argv[1]
+thang=sys.argv[2]
+ngay=sys.argv[3]
+gio=sys.argv[4]
+phut=sys.argv[5]
+giay=sys.argv[6]
+
+print (nam)
+print (thang)
+print (ngay)
+print (gio)
+print (phut)
+print (giay)
 
 conn = None
 # create ZK instance
@@ -12,11 +26,11 @@ try:
     # Example: Get All Users
     # Test connection
     zktime = conn.get_time()
-    print zktime
+    print (zktime)
     firm = conn.get_firmware_version()
-    print firm
+    print (firm)
     serial = conn.get_serialnumber()
-    print serial
+    print (serial)
     
 except Exception as e:
     print ("Process terminate : {}".format(e))
